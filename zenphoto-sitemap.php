@@ -20,15 +20,24 @@ if(!isset($_GET['sitemap'])) {
 	return;
 }
 
+/**
+ * Simple helper function which simply outputs a string and ends it of with a new-line.
+ * @param  $string The string to output
+ * @return void
+ */
+function echonl($string) {
+	echo($string . "\n");
+}
+
 // Output content type and charset
 header('Content-Type: text/xml;charset=utf-8');
 
 // Output XML file headers
-echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-echo "<urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
+echonl('<?xml version="1.0" encoding="UTF-8"?>');
+echonl('<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
 
 // End off the <urlset> tag
-echo '</urlset>';
+echonl('</urlset>');
 
 // Stop execution of the rest of Zenphoto
 exit();
