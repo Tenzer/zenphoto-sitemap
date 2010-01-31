@@ -22,7 +22,7 @@ if(!isset($_GET['sitemap'])) {
 
 /**
  * Simple helper function which simply outputs a string and ends it of with a new-line.
- * @param  $string The string to output
+ * @param  $string String
  * @return void
  */
 function echonl($string) {
