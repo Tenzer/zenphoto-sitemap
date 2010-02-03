@@ -39,6 +39,11 @@ function urlencodeWrapper(&$value, $key) {
 	$value = urlencode($value);
 }
 
+// Are we using mod_rewrite? If so, we set $mod_rewrite to the image suffix
+if(1 == getOption('mod_rewrite')) {
+	$mod_rewrite = urlencode(getOption('mod_rewrite_image_suffix'));
+}
+
 // Output content type and charset
 header('Content-Type: text/xml;charset=utf-8');
 
