@@ -13,6 +13,7 @@ we all like, even if this plugin is enabled.
 Installation
 ------------
 The installation procedure for this plugin is really simple:
+
 1.  Place `zenphoto-sitemap.php` inside the `plugins/` folder of your Zenphoto
     installation.
 2.  Activate the plugin from the Zenphoto administration panel, under the
