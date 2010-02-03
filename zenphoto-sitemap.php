@@ -6,13 +6,13 @@
  * Renders the sitemap if a gallery page is called with "?sitemap" in the URL.
  *
  * @author Jeppe Toustrup (Tenzer)
- * @version 2
+ * @version 2.0.0
  * @package plugins
  */
 
 $plugin_description = 'Here goes some description about zenphoto-sitemap';
 $plugin_author = 'Jeppe Toustrup (Tenzer)';
-$plugin_version = '2';
+$plugin_version = '2.0.0';
 $plugin_URL = 'http://tenzer.dk/open-source/zenphoto-sitemap';
 
 // Check if '?sitemap' is specified. If it isn't then we should stop execution of this script.
