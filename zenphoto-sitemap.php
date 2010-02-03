@@ -29,6 +29,16 @@ function echonl($string) {
 	echo($string . "\n");
 }
 
+/**
+ * A simple wrapper function for urlencode, which allows us to use it with array_walk().
+ * @param  $value The array value from array_walk()
+ * @param  $key The array key from array_walk() - Not used
+ * @return void
+ */
+function urlencodeWrapper(&$value, $key) {
+	$value = urlencode($value);
+}
+
 // Output content type and charset
 header('Content-Type: text/xml;charset=utf-8');
 
