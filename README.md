@@ -35,8 +35,43 @@ Simply add the line `Sitemap: [your gallery link]/?sitemap` to the beginning of
 `robots.txt`, and you are done.
 
 
+Bug reports and feature requests
+--------------------------------
+You are of course welcome to post bug reports and feature requests for this
+plugin, this should either be on the [GitHub issue tracker][6], or as a comment
+on my [blog][7].
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+Changelog
+---------
+
+### 1.0.0 - 2008-11-26 ###
+* Initial version
+
+### 1.0.1 - 2009-01-24 ###
+* Removed the `<priority>` tag from the root page, since it didn't do any good
+  and generated an error message from Google.
+* Added header information to be sent out with the sitemap. (Thank you Adrien
+  Gibrat)
+
+### 1.0.2 - 2009-02-26 ###
+* Made handling of non-alphanumeric characters correct, so they will be URL
+  encoded. (Thank you 'suxab' for reporting this)
+
+### 2.0.0 - 2010-02-19 ###
+* Revamp of the entire code - Now one big sitemap is generated instead of one
+  index which then points to a sitemap for each gallery. This will decrease the
+  amount of SQL queries and HTTP requests needed, all in all making the plugin
+  more eco friendly ;)
+
+
 [1]: http://www.zenphoto.org/
 [2]: http://sitemaps.org/
 [3]: http://en.wikipedia.org/wiki/Rewrite_engine
 [4]: http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34609
 [5]: http://www.bing.com/toolbox/posts/archive/2009/10/09/submit-a-sitemap-to-bing.aspx
+[6]: http://github.com/Tenzer/zenphoto-sitemap/issues
+[7]: http://tenzer.dk/
