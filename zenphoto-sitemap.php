@@ -10,7 +10,7 @@
  * @package plugins
  */
 
-$plugin_description = 'Here goes some description about zenphoto-sitemap';
+$plugin_description = 'Generates a sitemaps.org compatible XML file, for use with Google and other search engines.';
 $plugin_author = 'Jeppe Toustrup (Tenzer)';
 $plugin_version = '2.0.0';
 $plugin_URL = 'http://tenzer.dk/open-source/zenphoto-sitemap';
