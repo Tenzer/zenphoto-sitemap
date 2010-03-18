@@ -72,6 +72,9 @@ Changelog
   amount of SQL queries and HTTP requests needed, all in all making the plugin
   more eco friendly ;)
 
+### 2.1.0 - 2010-03-18 ###
+* Added Zenpage support thanks to contribution from Malte Müller (acrylian)
+
 
 [1]: http://www.zenphoto.org/
 [2]: http://sitemaps.org/

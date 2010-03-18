@@ -6,7 +6,7 @@
  * Renders the sitemap if a gallery page is called with "?sitemap" in the URL.
  *
  * @author Jeppe Toustrup (Tenzer)
- * @version 2.0.0
+ * @version 2.1.0
  * @package plugins
  */
 
