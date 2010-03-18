@@ -11,7 +11,7 @@
  */
 
 $plugin_description = 'Generates a sitemaps.org compatible XML file, for use with Google and other search engines.';
-$plugin_author = 'Jeppe Toustrup (Tenzer)';
+$plugin_author = 'Jeppe Toustrup (Tenzer), extended by Malte Müller (acrylian)';
 $plugin_version = '2.0.0';
 $plugin_URL = 'http://tenzer.dk/open-source/zenphoto-sitemap';
 
@@ -83,6 +83,48 @@ foreach($public_albums as $public_album) {
 	} else {
 		foreach($public_images as $public_image) {
 			$urls[] = '?album=' . $public_album['folder'] . '&amp;image=' . urlencode($public_image['filename']);
+		}
+	}
+}
+
+// Zenpage optional stuff
+if(getOption('zp_plugin_zenpage')) {
+	// Zenpage pages
+	$public_pages = query_full_array('SELECT `titlelink` FROM ' . prefix('zenpage_pages') . ' WHERE `show` = 1;');
+	// Add the correct URLs to the URL list
+	if($mod_rewrite) {
+		foreach($public_pages as $public_page) {
+			$urls[] = 'pages/' . urlencode($public_page['titlelink']);
+		}
+	} else {
+		foreach($public_pages as $public_page) {
+			$urls[] = '?p=pages&amp;title=' . urlencode($public_page['titlelink']);
+		}
+	}
+
+	// Zenpage news articles
+	$public_news = query_full_array('SELECT `titlelink` FROM ' . prefix('zenpage_news') . ' WHERE `show` = 1;');
+	// Add the correct URLs to the URL list
+	if($mod_rewrite) {
+		foreach($public_news as $public_article) {
+			$urls[] = 'news/' . urlencode($public_article['titlelink']);
+		}
+	} else {
+		foreach($public_news as $public_article) {
+			$urls[] = '?p=news&amp;title=' . urlencode($public_article['titlelink']);
+		}
+	}
+
+	// Zenpage news categories
+	$public_cats = query_full_array('SELECT `cat_link` FROM ' . prefix('zenpage_news_categories') . ';');
+	// Add the correct URLs to the URL list
+	if($mod_rewrite) {
+		foreach($public_cats as $public_cat) {
+			$urls[] = 'news/category/' . urlencode($public_cat['cat_link']);
+		}
+	} else {
+		foreach($public_cats as $public_cat) {
+			$urls[] = '?p=news&amp;category=' . urlencode($public_cat['cat_link']);
 		}
 	}
 }

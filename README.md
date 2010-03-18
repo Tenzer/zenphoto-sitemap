@@ -42,6 +42,11 @@ plugin, this should either be on the [GitHub issue tracker][6], or as a comment
 on my [blog][7].
 
 
+Contributers
+------------
+Malte Müller (acrylian)
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
