@@ -1,5 +1,19 @@
 Zenphoto-sitemap
 ================
+
+Project moved
+-------------
+The development of this has moved to the [Zenphoto source tree][8], where the
+plugin now is known as [sitemap-extended][9]. Any further contributions should go
+through the official Zenphoto channels.
+
+I will keep this version online here, for people who may prefer my simpler
+approach than what the plugin has evolved into, but no further developpment will
+be made by me.
+
+
+Introduction
+------------
 This is a plugin for [Zenphoto][1] which generates a [sitemaps.org][2]
 compatible sitemap for the gallery, when the gallery is accessed with `?sitemap`
 in the URL. The sitemap contains links to all public and non-password protected
@@ -83,3 +97,5 @@ Changelog
 [5]: http://www.bing.com/toolbox/posts/archive/2009/10/09/submit-a-sitemap-to-bing.aspx
 [6]: http://github.com/Tenzer/zenphoto-sitemap/issues
 [7]: http://tenzer.dk/
+[8]: http://www.zenphoto.org/trac/browser
+[9]: http://www.zenphoto.org/trac/browser/trunk/zp-core/zp-extensions/sitemap-extended.php
